@@ -1,6 +1,8 @@
 language: node_js
+
 node_js:
 - 8.9.0
+
 before_install:
 - openssl aes-256-cbc -K $encrypted_9d3e899cd6a4_key -iv $encrypted_9d3e899cd6a4_iv
   -in id_rsa.enc -out ~\/.ssh/id_rsa -d
@@ -10,6 +12,6 @@ before_install:
 after_success:
 - ssh root@10.211.55.5 'cd /usr/loacal/travisRepository && git pull && pm2 restart
   app.js'
-  
+
 addons:
   ssh_known_hosts: 10.211.55.5
