@@ -8,7 +8,7 @@ before_install:
 - echo -e "Host 10.211.55.5\n\tStrictHostKeyChecking no\n" >> ~/.ssh/config
 
 after_success:
-- ssh root@10.211.55.5 'cd /usr/loacal/travisRepository && git pull && pm2 restart
+- ssh root@10.211.55.5 'cd /usr/local/travisRepository && git pull && pm2 restart
   app.js'
 addons:
   ssh_known_hosts: 10.211.55.5

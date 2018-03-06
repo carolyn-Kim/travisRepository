@@ -2,7 +2,7 @@ const koa=require('koa2');
 const app = new koa();
 
 app.use(async(ctx,next)=>{
-    ctx.body ="hello koa2 emmmmmm...."
+    ctx.body ="hello koa2 woqu......"
 });
 
 app.listen(3000,()=>{
