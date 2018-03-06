@@ -1,4 +1,5 @@
-language : node_js
-
+language: node_js
 node_js:
- - 8.9.0
+- 8.9.0
+after_script:
+  - ssh virtual "cd /usr/loacal/travisRepository && git pull && pm2 restart app.js"
